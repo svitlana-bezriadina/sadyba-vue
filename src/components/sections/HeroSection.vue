@@ -97,67 +97,67 @@ h1 {
     height: 127%;
     object-position: 72% 100%;
   }
-
+ 
   .hero__shade {
     background:
       linear-gradient(180deg, rgba(18, 7, 8, 0.55) 0%, rgba(18, 7, 8, 0) 22%, rgba(18, 7, 8, 0.3) 42%, rgba(18, 7, 8, 0.82) 68%, rgba(18, 7, 8, 0.95) 100%),
       linear-gradient(90deg, rgba(18, 7, 8, 0.5) 0%, rgba(18, 7, 8, 0) 75%);
   }
-
+ 
   .hero__content {
     justify-content: flex-end;
     padding: 112px clamp(24px, 5vw, 56px) calc(56px + env(safe-area-inset-bottom, 0px));
   }
-
+ 
   .hero__eyebrow {
     font-size: 15px;
     letter-spacing: 0.2em;
     max-width: 520px;
     margin-bottom: 18px;
   }
-
+ 
   h1 {
     font-size: clamp(48px, 8vw, 72px);
     margin-bottom: 20px;
   }
-
+ 
   .hero__sub {
     font-size: 21px;
     max-width: 36ch;
     margin-bottom: 28px;
   }
 }
-
+ 
 /* ===== ТЕЛЕФОН (до 600 px): кнопки на всю ширину ===== */
 @media (max-width: 600px) {
   .hero__content {
     padding: 96px 24px calc(36px + env(safe-area-inset-bottom, 0px));
   }
-
+ 
   .hero__eyebrow {
     font-size: 12.5px;
     letter-spacing: 0.16em;
     margin-bottom: 16px;
   }
-
+ 
   h1 {
     font-size: clamp(38px, 11.2vw, 48px);
     line-height: 1.08;
     margin-bottom: 18px;
   }
-
+ 
   .hero__sub {
     font-size: 17px;
     max-width: 30ch;
     margin-bottom: 26px;
   }
-
+ 
   .hero__acts {
     flex-direction: column;
     width: 100%;
     gap: 12px;
   }
-
+ 
   .hero__acts :deep(.btn) {
     display: block;
     width: 100%;
@@ -166,7 +166,7 @@ h1 {
     font-size: 18px;
   }
 }
-
+ 
 /* ===== телефон/планшет горизонтально: низький екран, текст по центру ===== */
 @media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
   .hero__content {
