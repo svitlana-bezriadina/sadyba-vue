@@ -91,96 +91,95 @@ h1 {
 
 /* ===== ПЛАНШЕТ (до 1024 px): текст унизу, фото зверху, темніє знизу ===== */
 @media (max-width: 1024px) {
-  /* тут напис на даху ховаємо: картинка притиснута донизу, верх обрізається */
   .hero__bg {
     bottom: 0;
     height: 127%;
     object-position: 72% 100%;
   }
- 
+
   .hero__shade {
     background:
       linear-gradient(180deg, rgba(18, 7, 8, 0.55) 0%, rgba(18, 7, 8, 0) 22%, rgba(18, 7, 8, 0.3) 42%, rgba(18, 7, 8, 0.82) 68%, rgba(18, 7, 8, 0.95) 100%),
       linear-gradient(90deg, rgba(18, 7, 8, 0.5) 0%, rgba(18, 7, 8, 0) 75%);
   }
- 
+
   .hero__content {
-    justify-content: flex-end;
     padding: 112px clamp(24px, 5vw, 56px) calc(56px + env(safe-area-inset-bottom, 0px));
+    align-items: flex-start;
   }
- 
+
   .hero__eyebrow {
     font-size: 15px;
     letter-spacing: 0.2em;
     max-width: 520px;
     margin-bottom: 18px;
   }
- 
+
   h1 {
     font-size: clamp(48px, 8vw, 72px);
     margin-bottom: 20px;
   }
- 
+
   .hero__sub {
     font-size: 21px;
     max-width: 36ch;
     margin-bottom: 28px;
   }
+  .wrap {padding: 50px; margin: 0;}
 }
- 
-/* ===== ТЕЛЕФОН (до 600 px): кнопки на всю ширину ===== */
-@media (max-width: 600px) {
-  .hero__content {
-    padding: 96px 24px calc(36px + env(safe-area-inset-bottom, 0px));
+
+/* ===== ТЕЛЕФОН (до 767 px): текст по центру, кнопки в один ряд ===== */
+@media (max-width: 768px) {
+
+  .hero {min-height: 70svh;}
+  .hero__shade {
+    background:
+      linear-gradient(180deg, rgba(18, 7, 8, 0.6) 0%, rgba(18, 7, 8, 0) 22%, rgba(18, 7, 8, 0) 78%, rgba(18, 7, 8, 0.5) 100%),
+      radial-gradient(ellipse 90% 70% at 50% 52%, rgba(18, 7, 8, 0.72) 0%, rgba(18, 7, 8, 0.5) 100%);
   }
- 
-  .hero__eyebrow {
-    font-size: 12.5px;
-    letter-spacing: 0.16em;
-    margin-bottom: 16px;
-  }
- 
-  h1 {
-    font-size: clamp(38px, 11.2vw, 48px);
-    line-height: 1.08;
-    margin-bottom: 18px;
-  }
- 
-  .hero__sub {
-    font-size: 17px;
-    max-width: 30ch;
-    margin-bottom: 26px;
-  }
- 
-  .hero__acts {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-  }
- 
-  .hero__acts :deep(.btn) {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 16px 20px;
-    font-size: 18px;
-  }
-}
- 
-/* ===== телефон/планшет горизонтально: низький екран, текст по центру ===== */
-@media (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
+
   .hero__content {
     justify-content: center;
-    padding-top: 84px;
-    padding-bottom: 32px;
+    align-items: center;
+    text-align: center;
+    padding:0 24px;
+    margin:50px 0 50px 0;
   }
-  .hero__shade {
-    background: linear-gradient(90deg, rgba(18, 7, 8, 0.88) 0%, rgba(18, 7, 8, 0.6) 45%, rgba(18, 7, 8, 0.1) 80%, rgba(18, 7, 8, 0) 100%);
+
+  .hero__eyebrow {
+    max-width: none;
+    opacity: 0.92;
+    font-size: clamp(11px, 2.6vw, 16px);
+    letter-spacing: 0.15em;
+    margin-bottom: clamp(16px, 3.4vw, 24px);
   }
-  h1 { font-size: clamp(32px, 6vw, 46px); margin-bottom: 14px; }
-  .hero__eyebrow { margin-bottom: 12px; }
-  .hero__sub { font-size: 16px; margin-bottom: 18px; }
-  .hero__acts { flex-direction: row; width: auto; }
-  .hero__acts :deep(.btn) { width: auto; padding: 12px 20px; font-size: 16px; }
+
+  h1 {
+    font-size: clamp(38px, 11vw, 80px);
+    line-height: 1.06;
+    margin-bottom: clamp(18px, 3.6vw, 28px);
+  }
+
+  .hero__sub {
+    font-size: clamp(16px, 2.7vw, 20px);
+    line-height: 1.5;
+    max-width: 34ch;
+    margin: 0 auto clamp(24px, 4.4vw, 34px);
+  }
+
+  .hero__acts {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero__acts :deep(.btn) {
+    width: auto;
+    padding: 14px 16px;
+    font-size: clamp(14.5px, 2.4vw, 19px);
+    font-weight: 500;
+  }
 }
+
 </style>
