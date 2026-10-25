@@ -1,0 +1,25 @@
+/* Усі кольори й шрифти з Figma живуть тут. Змінили значення — змінився весь сайт. */
+:root {
+  --wine: #6b0d14;
+  --wine-d: #42070c;
+  --paper: #fffaf6;
+  --ink: #2b0b0e;
+  --wood: #c08a55;
+
+  --sec: var(--paper);
+  --sec-ink: var(--ink);
+  --card: #fff;
+  --line: rgba(107, 13, 20, 0.22);
+
+  --cream: #faf5ef;
+  --sand: #eee6da;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-head: 'Alegreya', Georgia, serif;
+  --font-body: 'Alegreya Sans', Verdana, sans-serif;
+
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --sec: #1d0b0d; --sec-ink: #f6e9e4; --card: #2a1012; --line: rgba(255, 255, 255, 0.18); }
+}
